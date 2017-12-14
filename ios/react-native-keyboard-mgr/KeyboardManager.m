@@ -12,4 +12,11 @@
 
 RCT_EXPORT_MODULE(KeyboardManager);
 
+/**
+ * 启用
+ */
+RCT_EXPORT_METHOD(setEnabled:(BOOL)enabled){
+    [IQKeyboardManager sharedManager].enable = enabled;
+}
+
 @end

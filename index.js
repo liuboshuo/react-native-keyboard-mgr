@@ -1,6 +1,11 @@
-//index.js
+/**
+ * Created by liushuo on 17/12/11.
+ */
+
 import React, {
     NativeModules
 } from 'react-native';
 
-module.exports = NativeModules.KeyboardManager;
+const KeyboardManager =  NativeModules.KeyboardManager;
+
+export default KeyboardManager;

@@ -6,48 +6,49 @@
 
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+    AppRegistry,
+    StyleSheet,
+    ScrollView,
+    View,
+    TextInput
 } from 'react-native';
-
+import KeyBorardManager from 'react-native-keyboard-mgr'
 export default class Example extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
+    render() {
+        KeyBorardManager.setEnabled(true)
+        return (
+            <View style={styles.container}>
+                {/*<ScrollView style={{flex:1}}>*/}
+                    <View style={styles.textView}>
+                        <TextInput style={styles.text}/>
+                    </View>
+                {/*</ScrollView>*/}
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
+    },
+    textView:{
+        position:"absolute",
+        flexDirection:"row",
+        justifyContent: 'center',
+        bottom:0,
+    },
+    text: {
+        borderWidth:1,
+        borderColor:"purple",
+        backgroundColor:"orange",
+        height:40,
+        width:300,
+        borderRadius:6
+    },
 });
 
 AppRegistry.registerComponent('Example', () => Example);
