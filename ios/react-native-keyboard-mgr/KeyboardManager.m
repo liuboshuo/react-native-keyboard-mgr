@@ -10,6 +10,19 @@
 
 @implementation KeyboardManager
 
+
+
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+        [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+    }
+    return self;
+}
+
 RCT_EXPORT_MODULE(KeyboardManager);
 
 /**
