@@ -17,7 +17,6 @@
 {
     self = [super init];
     if (self) {
-        [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
         [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     }
     return self;
