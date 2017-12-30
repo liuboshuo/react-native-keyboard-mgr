@@ -19,7 +19,7 @@
     self = [super init];
     if (self) {
         [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
-        [IQKeyboardManager sharedManager].keyboardDistanceFromTextField = 10;
+        [IQKeyboardManager sharedManager].keyboardDistanceFromTextField = 0;
         [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
         [IQKeyboardManager sharedManager].shouldShowTextFieldPlaceholder = YES;
     }
@@ -52,8 +52,8 @@ RCT_EXPORT_METHOD(setShouldShowTextInputPlaceholder:(BOOL)enabled){
 /**
  * TextInput距离键盘的距离
  */
-RCT_EXPORT_METHOD(setKeyboardDistanceFromTextInput:(float)enabled){
-    [IQKeyboardManager sharedManager].keyboardDistanceFromTextField = 10;
+RCT_EXPORT_METHOD(setKeyboardDistanceFromTextInput:(float)distance){
+    [IQKeyboardManager sharedManager].keyboardDistanceFromTextField = distance;
 }
 
 /**

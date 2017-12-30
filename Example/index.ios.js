@@ -10,17 +10,25 @@ import {
     StyleSheet,
     ScrollView,
     View,
-    TextInput
+    TextInput,
+    Platform
 } from 'react-native';
 import KeyBorardManager from 'react-native-keyboard-mgr'
+
+const isIos = Platform.OS == "ios";
+
 export default class Example extends Component {
     render() {
-        KeyBorardManager.setEnabled(true)
+        isIos && KeyBorardManager.setEnabled(true)
+        isIos && KeyBorardManager.setEnableAutoToolbar(true)
+        isIos && KeyBorardManager.setShouldShowTextInputPlaceholder(false)
+        isIos && KeyBorardManager.setShouldResignOnTouchOutside(false)
+        isIos && KeyBorardManager.setPlaceholderFont(10)
         return (
             <View style={styles.container}>
                 {/*<ScrollView style={{flex:1}}>*/}
                     <View style={styles.textView}>
-                        <TextInput style={styles.text}/>
+                        <TextInput style={styles.text} placeholder="占位文字"/>
                     </View>
                 {/*</ScrollView>*/}
             </View>
