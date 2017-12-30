@@ -26,13 +26,30 @@ react-native的键盘自适应ios版本
    
    
 
-### 使用
+### 使用API
 
 ``` npm install --save react-native-keyboard-mgr ```
+
+- ```setEnabled```
 
 如果你想在某些场景禁用键盘自适应，只需要使用```setEnabled(false)```就可以了，
 
 如果你想启用, 只需要使用```setEnabled(true)```就可以了。
+
+
+- ```setEnableAutoToolbar```
+
+还可以自定义是否开启自带的工具条
+
+
+- ```setShouldShowTextInputPlaceholder,setPlaceholderFont```
+
+修改placholder的显示和隐藏，和字体大小
+
+-  ```setShouldResignOnTouchOutside ```
+
+点击背景是否收起键盘
+
 
 
 ### 结语
