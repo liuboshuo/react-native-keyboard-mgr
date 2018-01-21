@@ -13,17 +13,17 @@ import {
     TextInput,
     Platform
 } from 'react-native';
-import KeyBorardManager from 'react-native-keyboard-mgr'
 
-const isIos = Platform.OS == "ios";
+import KeyBorardManager from 'react-native-keyboard-mgr'
 
 export default class Example extends Component {
     render() {
-        isIos && KeyBorardManager.setEnabled(true)
-        isIos && KeyBorardManager.setEnableAutoToolbar(true)
-        isIos && KeyBorardManager.setShouldShowTextInputPlaceholder(false)
-        isIos && KeyBorardManager.setShouldResignOnTouchOutside(false)
-        isIos && KeyBorardManager.setPlaceholderFont(10)
+        console.log(KeyBorardManager);
+        KeyBorardManager.setEnabled(true)
+        KeyBorardManager.setEnableAutoToolbar(true)
+        KeyBorardManager.setShouldShowTextInputPlaceholder(false)
+        KeyBorardManager.setShouldResignOnTouchOutside(false)
+        KeyBorardManager.setPlaceholderFont(10)
         return (
             <View style={styles.container}>
                 {/*<ScrollView style={{flex:1}}>*/}
